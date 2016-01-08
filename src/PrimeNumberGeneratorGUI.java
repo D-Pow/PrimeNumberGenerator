@@ -1,6 +1,6 @@
 /*PrimeNumberGeneratorGUI.java
  * This is a GUI for the prime number generator
- * @author Devon, 9-24-15
+ * @author D-Pow, 9-24-15
  */
 package primenumbergenerator;
 import java.awt.event.KeyEvent;
