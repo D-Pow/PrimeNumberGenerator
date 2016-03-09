@@ -2,7 +2,7 @@
  * This is a GUI for the prime number generator
  * @author D-Pow, 9-24-15
  */
-package primenumbergenerator;
+
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
@@ -192,7 +192,11 @@ public class PrimeNumberGeneratorGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrimeNumberGeneratorGUI().setVisible(true);
+                PrimeNumberGeneratorGUI pngGUI = new PrimeNumberGeneratorGUI();
+                pngGUI.setTitle("Prime Number Generator");
+                pngGUI.setAlwaysOnTop(false);
+                pngGUI.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                pngGUI.setVisible(true);
             }
         });
     }
