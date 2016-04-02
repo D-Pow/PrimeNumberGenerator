@@ -24,7 +24,7 @@ public class PrimeNumberGeneratorGUI extends javax.swing.JFrame {
         primeNumbers.add(5);
         primeNumbers.add(7);
         //Initialize primeNumbers with some primes.
-        int x = 9; //Starting point is 9
+        int primeNumberCandidate = 9; //Starting point is 9
             
         int numberOfPrimes;
         try {
@@ -34,19 +34,24 @@ public class PrimeNumberGeneratorGUI extends javax.swing.JFrame {
             return null;
         }
         
-        int i = 0;
+        int primeNumber = 0;
         while (primeNumbers.size() < numberOfPrimes) {
             for (Object num : primeNumbers) {
-                i = (int) num;
+                primeNumber = (int) num;
                 
-                if (x % i == 0) {
+                if (primeNumberCandidate % primeNumber == 0) {
+                    //IF the candidate is divisible by any of the prime
+                    //numbers, then break out of the for-loop
+                    //This prevents it from being added to the list
                     break;
                 }
             }
-            if (x % i != 0) {
-                primeNumbers.add(x);
+            if (primeNumberCandidate % primeNumber != 0) {
+                //Add a number to the list only if the for-loop
+                //confirms that all previous primeNumbers were checked
+                primeNumbers.add(primeNumberCandidate);
             }
-            x = x + 2; //We will ignore all even numbers.
+            primeNumberCandidate += 2; //Ignore all even numbers.
         }//ends the creation of the primeNumbers list
         
         return primeNumbers;
