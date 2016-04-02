@@ -14,9 +14,9 @@ public class PrimeNumberGeneratorGUI extends javax.swing.JFrame {
         initComponents();
     }
     
-    public List generatePrimeNumbers() {
+    public List<Integer> generatePrimeNumbers() {
         //This is the part that actually generates the prime numbers
-        List primeNumbers = new ArrayList();
+        List<Integer> primeNumbers = new ArrayList<>();
         
         primeNumbers.clear(); //Resets prime number list
         primeNumbers.add(2);
